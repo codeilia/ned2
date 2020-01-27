@@ -1,0 +1,16 @@
+- V_0.1 commit 63bb1a03a332714046993f230c8112e155750fdb "update show receipt page"
+
+- V_0.2 commit a3c3d4b93953a81135045ced420489692335b4b4 "update admin dashboard counts statistics"
+
+- V_0.3 commit 32f451817e20c54be0468202b7671ad9ffd85939 "put access control on seeing sidebar menus"
+
+- V_0.4 commit 4b69d73fcffb277a9639878ef0bea47f9427f088 "add some of permissions and access checking"
+
+- V_0.5 commit 3a2e9bfae50926e3f0bd96ecee9645798df7a326 "update profile picture"
+
+- V_0.6 commit 3f12f8142ee8a40dd36780001d9b86554f931d81 "add autofilling fields on validation erros to forms"
+
+- V_0.7 commit 123981dedf0eb6d886edbe871cb93fb0bfa31bb9 "create counters dashboard count-statistics"
+
+- V_0.8 commit 809cf767f02f5f3816911d4294996429ad61d749  "create tabs for registering sale form and fix mistakes"
+

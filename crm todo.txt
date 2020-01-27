@@ -1,0 +1,26 @@
+- create sale and contract registers process => (mostly completed)
+
+- check for counters are not able to change other counters resources (very important!) => mostly completed
+
+- autofil forms => (completed)
+
+- create user profile picture and infos =>(completed)
+
+- counts and charts for counter dashboard
+
+- monthses chart for admin dashboard
+
+- update validation rules (for example validating mobile and)
+
+
+new to-do`s:
+
+- add currency controll for sale form
+
+- add credit field to sale form
+
+
+
+
+
+

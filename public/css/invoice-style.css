@@ -1,0 +1,218 @@
+/*Invoice StyleSheet(css 3)*/
+body{
+    font:12px tahoma;
+}
+a,a:visited{text-decoration:none;color:#ff0000;}
+a:hover{text-decoration:underline;color:#5b3535;}
+input{font:12px tahoma;}
+.mwh_mainwrapper{
+    font:12px tahoma;
+    direction:rtl;
+    text-align:right;
+    width:800px;
+    margin: 0px auto;
+    border:1px solid #cdcdcd;
+    line-height:19px;
+    padding: 0px 0px 10px 0px;
+}
+img{border:0px;}
+.mwh_secondwrapper{margin: 0px auto;}
+table{margin: 0px auto;}
+td{
+    vertical-align:top;
+}
+.mwh_mainwrapper .mwh_sep1{
+    width:100%;
+    height:1px;
+    background:#cdcdcd;
+    margin-bottom:5px;
+    margin-top:-5px;
+}
+div.error{
+    background: #f58c8c url('../images/alert.png') no-repeat 258px 5px;
+    padding: 8px 28px 8px 8px;
+    font:bold 11px tahoma;
+    color:#b92e2e;
+    width: 250px;
+    margin: 5px 5px;
+    border-radius: 3px;
+    border:1px #8b2015 solid;
+}
+
+
+table.mwh_box1{
+    background:#ffffff;
+    margin:0px auto;
+    border-collapse:collapse;
+
+}
+table.mwh_box1 th.theader, .theader{
+    background:#f1f1f1;
+    color:#000000;
+    font:bold 12px tahoma;
+    /*padding:9px 2px 6px 3px;*/
+    text-align:center;
+    font-family:tahoma;
+    height:25px;
+    border:1px solid #c8c8c8;
+}
+table.mwh_box1 td.tbody{
+    padding: 5px 5px;
+    vertical-align:top;
+    width:281px;
+
+    border:1px solid #c8c8c8;
+    border-top:0px;
+}
+table.mwh_box1 td a,a:visited{
+    text-decoration:none;
+    color:#5f0909;
+}
+table.mwh_box2{
+    background:#ffffff;
+    direction:rtl;
+    text-align:right;
+    width:100%;
+    border:1px solid #c8c8c8;
+    border-collapse:separate;
+    border-spacing: 5px 5px;
+}
+table.mwh_box2 td{
+    padding: 5px 5px;
+    text-align:center;
+
+
+}
+table.mwh_box3{
+    background:#ffffff;
+    /*margin: 0px auto;*/
+    border-collapse:collapse;
+    border:1px solid #c8c8c8;
+}
+table.mwh_box3 th.theader{
+    background:#f1f1f1;
+    color:#000000;
+    font:bold 12px tahoma;
+    /*padding:9px 2px 6px 3px;*/
+    text-align:center;
+    font-family:tahoma;
+    height:25px;
+    border-left:1px solid #c8c8c8;
+    border-bottom:1px solid #c8c8c8;
+
+}
+table.mwh_box3 td{
+    vertical-align:middle;
+    border-left:1px solid #c8c8c8;
+    border-bottom:1px solid #c8c8c8;
+    padding: 2px  5px;
+
+}
+table.mwh_box4{
+    background:#ffffff;
+    /*margin:0px 3px 0px 0px;*/
+    border-collapse:collapse;
+    border:1px solid #c8c8c8;
+}
+table.mwh_box4 th{
+    background:#ffffff;
+    color:#000000;
+    font:bold 12px tahoma;
+    /*padding:9px 2px 6px 3px;*/
+    text-align:center;
+    font-family:tahoma;
+    height:25px;
+    border-left:1px solid #c8c8c8;
+    border-bottom:1px solid #c8c8c8;
+    padding: 0px 2px;
+
+}
+table.mwh_box4 td{
+    vertical-align:middle;
+    border-left:1px solid #c8c8c8;
+    border-bottom:1px solid #c8c8c8;
+
+
+}
+.mwh_sep2{
+    background:#f2f2f2;
+    height:1px;
+    width:100%;
+}
+#more_dialog{
+    font: 12px tahoma;
+    text-align:right;
+    direction:rtl;
+}
+.unpaid {
+    font-size: 13px;
+    color: #FF0000;
+    font-weight: bold;
+}
+.paid {
+    font-size: 13px;
+    color: #779500;
+    font-weight: bold;
+}
+
+.refunded {
+    font-size: 13px;
+    color: #224488;
+    font-weight: bold;
+}
+
+.cancelled {
+    font-size: 13px;
+    color: #5f5f5f;
+    font-weight: bold;
+}
+
+.collections {
+    font-size: 13px;
+    color: #ffcc00;
+    font-weight: bold;
+}
+
+.creditbox {
+    border: 1px dashed #cc0000;
+    font-weight: bold;
+    background-color: #FBEEEB;
+    text-align: center;
+    width: 550px;
+    padding: 10px;
+    color: #cc0000;
+    margin-left: auto;
+    margin-right: auto;
+    text-align:right;
+    font-size:12px;
+}
+
+
+.header, .header .logo {
+    /*position: absolute;*/
+}
+
+.header .logo {
+    position: absolute;
+    top: 150px;
+}
+
+.logo__slogan {
+    display: block;
+    font-size: .85em;
+    font-weight:bold;
+    font-weight: 400;
+    color: #000000;
+    margin-top: -25px;
+    margin-right: 92px;
+}
+
+
+
+.header-background {
+    background: rgba(255,255,255,.3);
+    height: 200px;
+    width: 800px;
+    position: absolute;
+    display: block;
+}

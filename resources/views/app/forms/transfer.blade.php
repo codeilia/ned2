@@ -1,0 +1,1 @@
+<p class="font-bold col-orange">فقط اطلاعات فروش کافی است</p>
