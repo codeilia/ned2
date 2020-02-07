@@ -10,8 +10,8 @@ class GenerateFormsController extends Controller
 {
     public function form111(Soldier $soldier, Request $request)
     {
-        
-        $template_file_name = storage_path;
+        return back();
+//        $template_file_name = storage_path;
 
         $rand_no = rand(111111, 999999);
         $fileName = "results_" . $rand_no . ".docx";

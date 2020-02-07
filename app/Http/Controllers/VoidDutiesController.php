@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\VoidDuty;
+use App\Models\Soldier;
+use App\Models\VoidDuty;
+use App\Nedsa\Constants;
 use Illuminate\Http\Request;
 
 class VoidDutiesController extends Controller
@@ -12,19 +14,29 @@ class VoidDutiesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        $leaves = VoidDuty::with('soldier')->when(isset($request->soldier), function ($query)  use ($request){
+            return $query->where('soldier_id', $request->soldier);
+        })->paginate(Constants::PAGINATE_LIMIT);
+
+        return view('app.leaves.index', compact('leaves'));
     }
 
     /**
      * Show the form for creating a new resource.
      *
+     * @param Request $request
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        $selectedSoldier = Soldier::find($request->soldier);
+        $selectedSoldier = empty($selectedSoldier) ? '' : $selectedSoldier->id;
+
+        $soldiers = Soldier::get();
+
+        return view('app.void.create', compact('soldiers', 'selectedSoldier'));
     }
 
     /**

@@ -7,6 +7,7 @@ use App\Models\Soldier;
 use App\Models\Unit;
 use App\Response\MessageResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
 
 class MartialInfosController extends Controller
 {
@@ -80,8 +81,12 @@ class MartialInfosController extends Controller
      */
     public function update(Request $request, Soldier $soldier)
     {
+        $endDate = Carbon::parse($request->sent_date)->addMonth($request->legal_duty_time);
 
         $request->offsetSet('native', !! $request->native);
+        $request->offsetSet('green_card', !! $request->green_card);
+        $request->offsetSet('end_date',  $endDate);
+
         MartialInfo::updateOrCreate(
             ['soldier_id' => $soldier->id],
             $request->except('soldier')

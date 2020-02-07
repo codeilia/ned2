@@ -27,5 +27,14 @@ class Mapper
 
         if ($code == 5)
             return 'توراهی';
+
+        if ($code == 6)
+            return 'استعلاجی';
+
+        if ($code == 7)
+            return 'اظطراری';
+
+        if ($code == 8)
+            return 'تشویقی خارج از سقف';
     }
 }

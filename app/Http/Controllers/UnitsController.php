@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Unit;
+use App\Response\MessageResponse;
 use Illuminate\Http\Request;
 
 class UnitsController extends ApiController
@@ -14,7 +15,7 @@ class UnitsController extends ApiController
      */
     public function index()
     {
-        $units = Unit::get();
+        $units = Unit::with('martialInfos.soldier')->get();
         return view('app.units.index', compact('units'));
     }
 
@@ -25,7 +26,7 @@ class UnitsController extends ApiController
      */
     public function create()
     {
-        //
+        return view('app.units.create');
     }
 
     /**
@@ -63,7 +64,7 @@ class UnitsController extends ApiController
      */
     public function edit(Unit $unit)
     {
-        //
+        return view('app.units.edit', compact('unit'));
     }
 
     /**
@@ -77,10 +78,7 @@ class UnitsController extends ApiController
     {
         $unit->update($request->all());
 
-        return $this->respondUpdated(
-            'واحد مورد نظر با موفقیت ویرایش شد',
-            $unit
-        );
+        return MessageResponse::respondSuccess('معاونت مورد نظر با موفقیت ویرایش شد');
     }
 
     /**

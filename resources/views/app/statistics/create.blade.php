@@ -149,13 +149,13 @@
                     </div>
 
                     <div class="col-md-2">
-                        <input name="unit" type="checkbox" class="filled-in" id="unit">
-                        <label for="unit">تک</label>
+                        <input name="sent_date" type="checkbox" class="filled-in" id="sent_date">
+                        <label for="sent_date">تاریخ اعزام</label>
                     </div>
 
                     <div class="col-md-2">
-                        <input name="sent_date" type="checkbox" class="filled-in" id="sent_date">
-                        <label for="sent_date">تاریخ اعزام</label>
+                        <input name="extraDuty" type="checkbox" class="filled-in" id="extraDuty">
+                        <label for="extraDuty">اضافه خدمت</label>
                     </div>
 
                     <div class="col-md-2">
@@ -166,6 +166,11 @@
                     <div class="col-md-2">
                         <input name="start_date" type="checkbox" class="filled-in" id="start_date">
                         <label for="start_date">تاریخ شروع خدمت</label>
+                    </div>
+
+                    <div class="col-md-2">
+                        <input name="lastLeave" type="checkbox" class="filled-in" id="lastLeave">
+                        <label for="lastLeave">تاریخ شروع خدمت</label>
                     </div>
 
                     <div class="col-md-2">
@@ -195,7 +200,7 @@
 
                     <div class="col-md-2">
                         <input name="tosieh_code" type="checkbox" class="filled-in" id="tosieh_code">
-                        <label for="tosieh_code">کد توصیه</label>
+                        <label for="tosieh_code">وضعیت جسمانی</label>
                     </div>
 
                     <div class="col-md-2">

@@ -50,7 +50,8 @@
                         <tr>
                             <th class="text-center">ردیف</th>
                             <th class="text-center">نام واحد</th>
-                            <th class="text-center">کد</th>
+                            <th class="text-center">تعداد سرباز</th>
+                            <th class="text-center">سقف در سال جاری</th>
                             <th class="text-center"></th>
                         </tr>
                         </thead>
@@ -58,7 +59,8 @@
                         <tr>
                             <th class="text-center">ردیف</th>
                             <th class="text-center">نام واحد</th>
-                            <th class="text-center">کد</th>
+                            <th class="text-center">تعداد سرباز</th>
+                            <th class="text-center">سقف در سال جاری</th>
                             <th class="text-center"></th>
                         </tr>
                         </tfoot>
@@ -67,7 +69,8 @@
                             <tr>
                                 <td class="text-center"> {{ $index + 1 }} </td>
                                 <td class="text-center"> {{ $unit->title }} </td>
-                                <td class="text-center"> {{ $unit->code }} </td>
+                                <td class="text-center"> {{ count($unit->martialInfos) }} </td>
+                                <td class="text-center"> {{ $unit->yearly_max }} </td>
 
                                 <td class="text-center">
                                     <ul class="header-dropdown ">

@@ -6,6 +6,7 @@ return [
     'father_name' => 'نام پدر',
     'national_code' => 'کد ملی',
     'document_code' => 'شماره پرونده',
+    'document_status' => 'وضعیت پرونده',
     'birthday' => 'تاریخ تولد',
     'issue_place' => 'محل صدور',
     'married' => 'وضعیت تاهل',
@@ -32,7 +33,7 @@ return [
        'category' => 'رسته',
        'term' => 'دوره',
        'health_code' => 'کد سلامت',
-       'tosieh_code' => 'کد توصیه',
+       'tosieh_code' => 'وضعیت جسمانی',
        'legal_duty_time' => 'مدت قانونی خدمت',
        'native' => 'بومی',
        'training_camp' => 'مرکز آموزشی',
@@ -51,4 +52,5 @@ return [
         'total' => 'مرخصی کل',
     ],
 
+    'extraDuty' => 'اضافه خدمت'
 ];

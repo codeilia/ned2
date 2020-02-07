@@ -1,6 +1,6 @@
 @extends('layouts.app.master')
 
-@section('title', 'لیست سربازها')
+@section('title', 'لیست بایگانی شده ها')
 
 @section('content-heading')
     <ol class="breadcrumb">
@@ -11,7 +11,7 @@
         </li>
 
         <li class="active">
-            <i class="material-icons rtlIcon">assignment</i> لیست سربازها
+            <i class="material-icons rtlIcon">assignment</i> لیست بایگانی ها
         </li>
     </ol>
 @endsection
@@ -26,7 +26,7 @@
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             @component('layouts.app.components.basic-simple-card')
                 @slot('title')
-                    لیست سربازها
+                    لیست سربازهای بایگانی شده
                 @endslot
 
                 @slot('body')
@@ -192,33 +192,9 @@
 
                                                 <li>
                                                     <a href="{{
-                                                            route('shortages.index', ['soldier' => $soldier->id])
-                                                         }}">
-                                                        <span>کسری ها</span>
-                                                    </a>
-                                                </li>
-
-                                                <li>
-                                                    <a href="{{
-                                                            route('shortages.create', ['soldier' => $soldier->id])
-                                                         }}">
-                                                        <span>ثبت کسری</span>
-                                                    </a>
-                                                </li>
-
-                                                <li>
-                                                    <a href="{{
                                                             route('voidDuties.create', ['soldier' => $soldier->id])
                                                          }}">
                                                         <span>ثبت خلاء خدمت</span>
-                                                    </a>
-                                                </li>
-
-                                                <li>
-                                                    <a href="{{
-                                                            route('soldiers.estelam', ['soldier' => $soldier->id])
-                                                         }}">
-                                                        <span>استعلام</span>
                                                     </a>
                                                 </li>
 

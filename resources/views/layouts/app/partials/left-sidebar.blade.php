@@ -7,12 +7,13 @@
             {{--@if(Storage::disk('public')->has(Auth::user()->personal_photo))--}}
                 {{--<img src="{{ Storage::url(Auth::user()->personal_photo) }}" width="100" height="80" alt="User" />--}}
                 {{--@else--}}
-                <img src="{{ URL::asset('images/logo.png') }}" width="80" height="50" alt="User" />
+                <img src="{{ URL::asset('images/logo.png') }}" width="80" height="30" alt="User" />
             {{--@endif--}}
         </div>
         <div class="info-container">
-            <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                بانک اطلاعاتی ناویان ندسا - تهران
+            <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="">
+                <p> بانک اطلاعاتی ناویان</p>
+                <p>دفتر تهران ندسا - منابع سرباز</p>
                 {{--<span>{{ Auth::user()->details->first_name }}</span>--}}
                 {{--<span>{{ Auth::user()->details->last_name }}</span>--}}
             </div>

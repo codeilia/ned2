@@ -38,6 +38,8 @@
                                     <th class="text-center">{{ trans("nedsa.martialInfo.$column") }}</th>
                                 @elseif(array_key_exists($column, trans('nedsa.leaveInfo')))
                                     <th class="text-center">{{trans("nedsa.leaveInfo.$column") }}</th>
+                                @elseif($column === 'extraDuty')
+                                    <th class="text-center">{{trans("nedsa.extraDuty") }}</th>
                                 @else
                                     <th class="text-center">{{ trans("nedsa.$column") }}</th>
                                 @endif
@@ -49,10 +51,16 @@
                         @foreach($soldiers as $index => $soldier)
                             <tr>
                                 @foreach($columns as $column)
-                                    @if(array_key_exists($column, trans('nedsa.martialInfo')) && $soldier->martialInfo)
+                                    @if($column === 'unit' )
+                                        <td class="text-center">{{ $soldier->martialInfo->unit->title }}</td>
+                                    @elseif(array_key_exists($column, trans('nedsa.martialInfo')) && $soldier->martialInfo)
                                     <td class="text-center">{{ $soldier->martialInfo->$column }}</td>
                                     @elseif(array_key_exists($column, trans('nedsa.leaveInfo')) && $soldier->leaveInfo)
                                         <td class="text-center">{{ $soldier->leaveInfo->$column }}</td>
+                                    @elseif($column === 'extraDuty' && $soldier->extraDuties)
+                                        <td class="text-center">{{ $soldier->extraDuties()->sum('days') }}</td>
+                                    @elseif($column === 'lastLeave' && $soldier->leaves)
+                                        <td class="text-center">{{ $soldier->leaves()->latest()->first() }}</td>
                                     @else
                                     <td class="text-center">{{ $soldier->$column }}</td>
                                     @endif

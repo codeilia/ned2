@@ -9,17 +9,17 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
 
     <!-- Bootstrap Core Css -->
-    <link href="{{URL::asset('admin-dashboard/plugins/bootstrap/css/bootstrap.css')}}" rel="stylesheet">
+    <link href="{{URL::asset('adminBSB/plugins/bootstrap/css/bootstrap.css')}}" rel="stylesheet">
 
     <!-- Waves Effect Css -->
-    <link href="{{URL::asset('admin-dashboard/plugins/node-waves/waves.css')}}" rel="stylesheet" />
+    <link href="{{URL::asset('adminBSB/plugins/node-waves/waves.css')}}" rel="stylesheet" />
 
     <!-- Animation Css -->
-    <link href="{{URL::asset('admin-dashboard/plugins/animate-css/animate.css')}}" rel="stylesheet" />
+    <link href="{{URL::asset('adminBSB/plugins/animate-css/animate.css')}}" rel="stylesheet" />
 
     <!-- Custom Css -->
-    <link href="{{URL::asset('admin-dashboard/css/style.css')}}" rel="stylesheet">
-    <link href="{{URL::asset('admin-dashboard/css/rtl.css')}}" rel="stylesheet">
+    <link href="{{URL::asset('adminBSB/css/style.css')}}" rel="stylesheet">
+    <link href="{{URL::asset('adminBSB/css/rtl.css')}}" rel="stylesheet">
 </head>
 
 <body class="login-page">
@@ -30,8 +30,8 @@
 @endif
 <div class="login-box">
     <div class="logo">
-        <a href="javascript:void(0);">علی<b>بابا</b></a>
-        <small>سامانه مدیریت فروش شرکت علی بابا</small>
+        <a href="javascript:void(0);">منابع<b>سرباز</b></a><br>
+        <small>سامانه مدیریت منابع سرباز ندسا - دفتر تهران</small>
     </div>
     <div class="card">
         <div class="body">
@@ -43,12 +43,12 @@
                             <i class="material-icons">person</i>
                         </span>
                     <div class="form-line">
-                        @if ($errors->has('username'))
+                        @if ($errors->has('email'))
                             <span class="help-block">
-                                <strong>{{ $errors->first('username') }}</strong>
+                                <strong>{{ $errors->first('email') }}</strong>
                             </span>
                         @endif
-                        <input type="text" class="form-control" name="username" placeholder="ایمیل" required autofocus>
+                        <input type="text" class="form-control" name="email" placeholder="نام کاربری" required autofocus>
                     </div>
                 </div>
                 <div class="input-group{{ $errors->has('password') ? ' has-error' : '' }}">
@@ -84,20 +84,20 @@
 </div>
 
 <!-- Jquery Core Js -->
-<script src="{{URL::asset('admin-dashboard/plugins/jquery/jquery.min.js')}}"></script>
+<script src="{{URL::asset('adminBSB/plugins/jquery/jquery.min.js')}}"></script>
 
 <!-- Bootstrap Core Js -->
-<script src="{{URL::asset('admin-dashboard/plugins/bootstrap/js/bootstrap.js')}}"></script>
+<script src="{{URL::asset('adminBSB/plugins/bootstrap/js/bootstrap.js')}}"></script>
 
 <!-- Waves Effect Plugin Js -->
-<script src="{{URL::asset('admin-dashboard/plugins/node-waves/waves.js')}}"></script>
+<script src="{{URL::asset('adminBSB/plugins/node-waves/waves.js')}}"></script>
 
 <!-- Validation Plugin Js -->
-<script src="{{URL::asset('admin-dashboard/plugins/jquery-validation/jquery.validate.js')}}"></script>
+<script src="{{URL::asset('adminBSB/plugins/jquery-validation/jquery.validate.js')}}"></script>
 
 <!-- Custom Js -->
-<script src="{{URL::asset('admin-dashboard/js/admin.js')}}"></script>
-<script src="{{URL::asset('admin-dashboard/js/pages/examples/sign-in.js')}}"></script>
+<script src="{{URL::asset('adminBSB/js/admin.js')}}"></script>
+<script src="{{URL::asset('adminBSB/js/pages/examples/sign-in.js')}}"></script>
 </body>
 
 </html>

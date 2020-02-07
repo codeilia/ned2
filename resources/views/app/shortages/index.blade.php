@@ -1,6 +1,6 @@
 @extends('layouts.app.master')
 
-@section('title', 'لیست اضافه خدمت ها')
+@section('title', 'لیست کسری ها')
 
 @section('content-heading')
     <ol class="breadcrumb">
@@ -11,7 +11,7 @@
         </li>
 
         <li class="active">
-            <i class="material-icons rtlIcon">assignment</i> لیست اضافه خدمت ها
+            <i class="material-icons rtlIcon">assignment</i> لیست کسری ها
         </li>
     </ol>
 @endsection
@@ -26,7 +26,7 @@
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             @component('layouts.app.components.basic-simple-card')
                 @slot('title')
-                    لیست اضافه خدمت ها
+                    لیست کسری ها
                 @endslot
 
                 @slot('body')
@@ -34,25 +34,22 @@
                         <thead>
                         <tr>
                             <th class="text-center">ردیف</th>
-                            <th class="text-center">سرباز</th>
-                            <th class="text-center">اضافه</th>
-                            <th class="text-center">خلاء</th>
-                            <th class="text-center">علت</th>
-                            <th class="text-center"> تاریخ ثبت</th>
+                            <th class="text-center">تاریخ</th>
+                            <th class="text-center">شماره نامه</th>
+                            <th class="text-center">روز</th>
+                            <th class="text-center">تاریخ ثبت</th>
                             <th class="text-center">تاریخ ویرایش</th>
-                            <th class="text-center"></th>
                         </tr>
                         </thead>
                         <tbody>
-                        @foreach($extraDuties as $index => $extraDuty)
+                        @foreach($shortages as $index => $shortage)
                             <tr>
                                 <td class="text-center"> {{ $index + 1 }} </td>
-                                <td class="text-center"> {{ $extraDuty->soldier->first_name . ' '.  $extraDuty->soldier->last_name}} </td>
-                                <td class="text-center"> {{ $extraDuty->days }} </td>
-                                <td class="text-center"> {{ $extraDuty->void_duty }} </td>
-                                <td class="text-center"> {{ $extraDuty->reason }} </td>
-                                <td class="text-center" style="direction: ltr;">{{ CustomDateTime::toJalali($extraDuty->created_at) }}</td>
-                                <td class="text-center" style="direction: ltr;">{{ CustomDateTime::toJalali($extraDuty->updated_at) }}</td>
+                                <td class="text-center"> {{ CustomDateTime::toJalali($shortage->date) }} </td>
+                                <td class="text-center"> {{ $shortage->letter_number }} </td>
+                                <td class="text-center"> {{ $shortage->days }} </td>
+                                <td class="text-center" style="direction: ltr;">{{ CustomDateTime::toJalali($shortage->created_at) }}</td>
+                                <td class="text-center" style="direction: ltr;">{{ CustomDateTime::toJalali($shortage->updated_at) }}</td>
 
                                 <td class="text-center">
                                     <ul class="header-dropdown ">
@@ -63,20 +60,20 @@
                                             <ul class="dropdown-menu">
                                                 <li>
                                                     <a href="{{
-                                                            route('extraDuties.edit', ['extraDuty' => $extraDuty->id])
+                                                            route('shortages.edit', ['shortage' => $shortage->id])
                                                          }}">
                                                         <span>ویرایش</span>
                                                     </a>
                                                 </li>
 
                                                 <li>
-                                                    <a href="{{ route('extraDuties.destroy', ['extraDuty' => $extraDuty->id]) }}"
+                                                    <a href="{{ route('shortages.destroy', ['shortage' => $shortage->id]) }}"
                                                        onclick="event.preventDefault();
                                                                document.getElementById('delete-form.{{ $index }}').submit();">
                                                         <span>حذف</span>
                                                     </a>
 
-                                                    <form id="delete-form.{{ $index }}" action="{{ route('extraDuties.destroy', ['extraDuty' => $extraDuty->id]) }}" method="POST" style="display: none;">
+                                                    <form id="delete-form.{{ $index }}" action="{{ route('shortages.destroy', ['shortage' => $shortage->id]) }}" method="POST" style="display: none;">
                                                         {{ csrf_field() }}
                                                         {{ method_field('delete') }}
                                                     </form>
@@ -95,7 +92,7 @@
 
             @component('layouts.app.components.paginator')
                 @slot('data')
-                    {{  $extraDuties }}
+                    {{  $shortages }}
                 @endslot
             @endcomponent
         </div>

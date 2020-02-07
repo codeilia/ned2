@@ -18,8 +18,6 @@ class StatisticsController extends Controller
     {
         $columns = array_keys($request->except('_token'));
 
-//        dd(array_key_exists('unit', trans('nedsa.martialInfo')));
-//        dd(is_array(trans('nedsa.martialInfo')));
         $soldiers = Soldier::with([
             'leaves',
             'martialInfo.unit',
@@ -28,8 +26,8 @@ class StatisticsController extends Controller
             'extraDuties',
             'voidDuties',
             'absences',
-            'shortages'
-        ])->get();
+            'shortages',
+        ])->latest()->get();
 
         return view('app.statistics.index', compact('columns', 'soldiers'));
     }

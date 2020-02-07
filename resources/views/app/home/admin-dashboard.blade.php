@@ -30,9 +30,9 @@
                 </div>
                 <div class="body">
                     <canvas id="bar_chart" height="150"
-                            data-total-purchased-amount="{{ (integer)Redis::get('totalPurchasedAmount') ?: 0 }}"
-                            data-total-paid-amount="{{ (integer)Redis::get('totalPaidAmount') ?: 0 }}"
-                            data-total-unpaid-amount="{{ (integer)Redis::get('totalUnpaidAmount') ?: 0 }}"
+                            data-total-purchased-amount="{{ 1}}"
+                            data-total-paid-amount="{{ 1}}"
+                            data-total-unpaid-amount="{{ 1}}"
                     >
                     </canvas>
 
@@ -105,7 +105,7 @@
                             "اسفند",
                         ],
                         datasets: [{
-                            label:  "دومین مخزن داده",
+                            label: "دومین مخزن داده",
                             data: [100, 48, 40, 19, 86, 27, 90],
                             backgroundColor: 'rgba(0, 188, 212, 0.8)'
                         }]
@@ -115,30 +115,6 @@
                         legend: false
                     }
 
-                }
-            }
-            else if (type === 'pie') {
-                config = {
-                    type: 'pie',
-                    data: {
-                        datasets: [{
-                            data: pieChartDatas,
-                            backgroundColor: [
-                                "rgb(233, 30, 99)",
-                                "rgb(255, 193, 7)",
-                                "rgb(0, 188, 212)"
-                            ]
-                        }],
-                        labels: [
-                            "جمع کل خرید از کارگزاران",
-                            "پرداخت شده",
-                            "پرداخت نشده"
-                        ]
-                    },
-                    options: {
-                        responsive: true,
-                        legend: false
-                    }
                 }
             }
             return config;

@@ -44,7 +44,7 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group form-float">
-                                    <label for="unit_id" class="form-label">سرباز </label>
+                                    <label for="unit_id" class="form-label">واحد/معاونت </label>
                                     <select id="unit_id" class="form-control show-tick" name="unit_id" data-live-search="true">
                                         <option value=""> -- لطفا انتخاب کنید -- </option>
                                         @foreach($units as $unit)
@@ -59,7 +59,7 @@
                             <div class="col-md-6">
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" id="sent_zone" class="form-control" name="sent_zone" value="{{ $soldier->martial_info ? $soldier->martialInfo->sent_zone : null}}">
+                                        <input type="text" id="sent_zone" class="form-control" name="sent_zone" value="{{ $soldier->martialInfo ? $soldier->martialInfo->sent_zone : null}}">
                                         <label for="sent_zone" class="form-label"> حوزه اعزام</label>
                                     </div>
                                 </div>
@@ -70,8 +70,8 @@
                             <div class="col-md-6">
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" id="sent_date" class="form-control" name="sent_date" value="{{ $soldier->martial_info ? $soldier->martialInfo->sent_date : null}}">
-                                        <label for="sent_date" class="form-label"> تاریخ اعزام </label>
+                                        <input type="text" id="legal_duty_time" class="form-control" name="legal_duty_time" value="{{ $soldier->martialInfo ? $soldier->martialInfo->legal_duty_time : null}}">
+                                        <label for="legal_duty_time" class="form-label"> مدت قانونی خدمت به ماه</label>
                                     </div>
                                 </div>
                             </div>
@@ -79,8 +79,8 @@
                             <div class="col-md-6">
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" id="end_date" class="form-control" name="end_date" value="{{ $soldier->martial_info ? $soldier->martialInfo->end_date : null}}">
-                                        <label for="end_date" class="form-label"> تاریخ پایان خدمت </label>
+                                        <input type="text" id="sent_date" class="form-control datePicker" name="sent_date" value="{{ $soldier->martialInfo ? $soldier->martialInfo->sent_date : null}}">
+                                        <label for="sent_date" class="form-label"> تاریخ اعزام </label>
                                     </div>
                                 </div>
                             </div>
@@ -90,7 +90,7 @@
                             <div class="col-md-6">
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" id="start_date" class="form-control" name="start_date" value="{{ $soldier->martial_info ? $soldier->martialInfo->start_date : null}}">
+                                        <input type="text" id="start_date" class="form-control datePicker" name="start_date" value="{{ $soldier->martialInfo ? $soldier->martialInfo->start_date : null}}">
                                         <label for="start_date" class="form-label"> تاریخ شروع به کار</label>
                                     </div>
                                 </div>
@@ -98,7 +98,7 @@
                             <div class="col-md-6">
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" id="personal_code" class="form-control" name="personal_code" value="{{ $soldier->martial_info ? $soldier->martialInfo->personal_code : null}}">
+                                        <input type="text" id="personal_code" class="form-control" name="personal_code" value="{{ $soldier->martialInfo ? $soldier->martialInfo->personal_code : null}}">
                                         <label for="personal_code" class="form-label"> کد پرسنلی</label>
                                     </div>
                                 </div>
@@ -109,7 +109,7 @@
                             <div class="col-md-6">
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" id="degree" class="form-control" name="degree" value="{{ $soldier->martial_info ? $soldier->martialInfo->degree : null}}">
+                                        <input type="text" id="degree" class="form-control" name="degree" value="{{ $soldier->martialInfo ? $soldier->martialInfo->degree : null}}">
                                         <label for="degree" class="form-label"> درجه</label>
                                     </div>
                                 </div>
@@ -118,7 +118,7 @@
                             <div class="col-md-6">
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" id="term" class="form-control" name="term" value="{{ $soldier->martial_info ? $soldier->martialInfo->term  : null}}">
+                                        <input type="text" id="term" class="form-control" name="term" value="{{ $soldier->martialInfo ? $soldier->martialInfo->term  : null}}">
                                         <label for="term" class="form-label"> دوره</label>
                                     </div>
                                 </div>
@@ -129,7 +129,7 @@
                             <div class="col-md-6">
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" id="health_code" class="form-control" name="health_code" value="{{ $soldier->martial_info ? $soldier->martialInfo->health_code : null}}">
+                                        <input type="text" id="health_code" class="form-control" name="health_code" value="{{ $soldier->martialInfo ? $soldier->martialInfo->health_code : null}}">
                                         <label for="health_code" class="form-label"> کد سلامت</label>
                                     </div>
                                 </div>
@@ -138,8 +138,8 @@
                             <div class="col-md-6">
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" id="legal_duty_time" class="form-control" name="legal_duty_time" value="{{ $soldier->martial_info ? $soldier->martialInfo->legal_duty_time : null}}">
-                                        <label for="legal_duty_time" class="form-label"> مدت قانونی خدمت</label>
+                                        <input type="text" id="tosieh_code" class="form-control" name="tosieh_code" value="{{ $soldier->martialInfo ? $soldier->martialInfo->tosieh_code : null}}">
+                                        <label for="tosieh_code" class="form-label"> کد توصیه</label>
                                     </div>
                                 </div>
                             </div>
@@ -149,8 +149,8 @@
                             <div class="col-md-6">
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" id="tosieh_code" class="form-control" name="tosieh_code" value="{{ $soldier->martial_info ? $soldier->martialInfo->tosieh_code : null}}">
-                                        <label for="tosieh_code" class="form-label"> کد توصیه</label>
+                                        <input type="text" id="category" class="form-control" name="category" value="{{ $soldier->martialInfo ? $soldier->martialInfo->category : null}}">
+                                        <label for="category" class="form-label"> رسته خدمتی</label>
                                     </div>
                                 </div>
                             </div>
@@ -158,19 +158,40 @@
                             <div class="col-md-6">
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" id="category" class="form-control" name="category" value="{{ $soldier->martial_info ? $soldier->martialInfo->category : null}}">
-                                        <label for="category" class="form-label"> رسته خدمتی</label>
+                                        <input type="text" id="training_camp" class="form-control" name="training_camp" value="{{ $soldier->martialInfo ? $soldier->martialInfo->training_camp : null}}">
+                                        <label for="training_camp" class="form-label"> مرکز آموزش</label>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group form-float">
+                                        <div class="form-line">
+                                            <input type="text" id="previous_duty_place_state" class="form-control" name="previous_duty_place_state" value="{{ $soldier->martialInfo ? $soldier->martialInfo->previous_duty_place_state : null}}">
+                                            <label for="previous_duty_place_state" class="form-label">وضعیت محل خدمت قبلی</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group form-float">
+                                        <div class="form-line">
+                                            <input type="text" id="previous_intro_date" class="form-control datePicker" name="previous_intro_date" value="{{ $soldier->martialInfo ? $soldier->martialInfo->previous_intro_date : null}}">
+                                            <label for="previous_intro_date" class="form-label"> تاریخ معرفی از رده قبلی</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group form-float">
                                     @php
-                                    if ($soldier->martialInfo)
-                                    $native = $soldier->martialInfo->native ? 'checked' : '';
+                                        if ($soldier->martialInfo)
+                                        $native = $soldier->martialInfo->native ? 'checked' : '';
+                                        else $native = '';
                                     @endphp
                                     <input type="checkbox" id="native" class="filled-in" name="native" {{$native}}>
                                     <label for="native" class="form-label"> بومی؟</label>
@@ -179,41 +200,13 @@
 
                             <div class="col-md-6">
                                 <div class="form-group form-float">
-                                    <div class="form-line">
-                                        <input type="text" id="training_camp" class="form-control" name="training_camp" value="{{ $soldier->martial_info ? $soldier->martialInfo->training_camp : null}}">
-                                        <label for="training_camp" class="form-label"> مرکز آموزش</label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group form-float">
-                                    <div class="form-line">
-                                        <input type="text" id="green_card" class="form-control" name="green_card" value="{{ $soldier->martial_info ? $soldier->martialInfo->green_card : null}}">
-                                        <label for="green_card" class="form-label"> کفایت از آموزش</label>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-6">
-                                <div class="form-group form-float">
-                                    <div class="form-line">
-                                        <input type="text" id="previous_duty_place_state" class="form-control" name="previous_duty_place_state" value="{{ $soldier->martial_info ? $soldier->martialInfo->previous_duty_place_state : null}}">
-                                        <label for="previous_duty_place_state" class="form-label">وضعیت محل خدمت قبلی</label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group form-float">
-                                    <div class="form-line">
-                                        <input type="text" id="previous_intro_date" class="form-control" name="previous_intro_date" value="{{ $soldier->martial_info ? $soldier->martialInfo->previous_intro_date : null}}">
-                                        <label for="previous_intro_date" class="form-label"> تاریخ معرفی از رده قبلی</label>
-                                    </div>
+                                    @php
+                                        if ($soldier->martialInfo)
+                                        $green_card = $soldier->martialInfo->green_card ? 'checked' : '';
+                                        else $green_card = '';
+                                    @endphp
+                                    <input type="checkbox" id="green_card" class="filled-in" name="green_card" {{$green_card}}>
+                                    <label for="green_card" class="form-label"> کفایت از آموزش؟</label>
                                 </div>
                             </div>
                         </div>
@@ -352,8 +345,12 @@
 
             });
 
-            datePickerInput.val('');
-            datePickerInput.attr('placeholder', '1396-04-13');
+            datePickerVal = datePickerInput.val();
+            if (datePickerVal === '') {
+                datePickerInput.attr('placeholder', '1396-04-13');
+                datePickerInput.toggleClass('selected');
+            }
+
 
 //            $('.tooltipster').tooltipster({
 //                side: 'left'

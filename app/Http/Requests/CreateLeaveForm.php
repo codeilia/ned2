@@ -57,20 +57,33 @@ class CreateLeaveForm extends ResponsiveFormRequest
         $leaveInfo = $soldier->leaveInfo;
 
         if ($this->type == Constants::LEAVE_TYPE['DESERVED_LEAVE']['code'])
-            return $leaveInfo->desereved - $this->days;
+            return $this->cast($leaveInfo->desereved - $this->days);
 
         if ($this->type == Constants::LEAVE_TYPE['BONUS_LEAVE']['code'])
-            return $leaveInfo->desereved - $this->days;
+            return $this->cast($leaveInfo->bonus - $this->days);
 
         if ($this->type == Constants::LEAVE_TYPE['PARENTS_DIE_LEAVE']['code'])
-            return $leaveInfo->desereved - $this->days;
+            return $this->cast($leaveInfo->parents_die_vacation_leave - $this->days);
 
         if ($this->type == Constants::LEAVE_TYPE['MARRIAGE_LEAVE']['code'])
-            return $leaveInfo->desereved - $this->days;
+            return $this->cast($leaveInfo->marriage_vacation_leave - $this->days);
 
         if ($this->type == Constants::LEAVE_TYPE['TORAHI']['code'])
-            return $leaveInfo->desereved - $this->days;
+            return $this->cast($leaveInfo->torahi - $this->days);
+
+        if ($this->type == Constants::LEAVE_TYPE['ESTELAJI']['code'])
+            return $this->cast($leaveInfo->estelaji - $this->days);
+
+        if ($this->type == Constants::LEAVE_TYPE['EMERGENCY']['code'])
+            return $this->cast($leaveInfo->emergency - $this->days);
 
         return null;
+    }
+
+    public function cast($value)
+    {
+        if ($value < 0)
+            return 0;
+        return $value;
     }
 }

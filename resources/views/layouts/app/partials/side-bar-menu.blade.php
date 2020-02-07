@@ -15,6 +15,10 @@
 
         @include('layouts.app.partials.sidebar-menus.statistics')
 
+        @include('layouts.app.partials.sidebar-menus.archives')
+
+{{--        @include('layouts.app.partials.sidebar-menus.estelam')--}}
+
         @include('layouts.app.partials.sidebar-menus.logout')
 
     </ul>

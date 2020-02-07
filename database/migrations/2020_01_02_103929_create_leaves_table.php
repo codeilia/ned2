@@ -23,7 +23,7 @@ class CreateLeavesTable extends Migration
             $table->dateTime('from')->nullable();
             $table->dateTime('to')->nullable();
             $table->tinyInteger('days')->nullable();
-            $table->string('type')->nullable(); //estehqaqi, tashviqi, to-rahi, ...
+            $table->string('type')->index()->nullable(); //estehqaqi, tashviqi, to-rahi, ...
             $table->timestamps();
         });
     }

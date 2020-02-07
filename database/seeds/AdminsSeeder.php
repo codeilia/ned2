@@ -12,15 +12,10 @@ class AdminsSeeder extends Seeder
     public function run()
     {
         $admin = \App\User::create([
-            'role' => 0,
-            'personal_code' => 'root',
-            'username' => 'root',
-            'password' => \Illuminate\Support\Facades\Hash::make('crmR00t'),
+            'name' => 'جواد فتاحی',
+            'email' => 'fatahi',
+            'password' => \Illuminate\Support\Facades\Hash::make('fatahi@98@123'),
         ]);
 
-        $details = \App\Models\UserDetail::create([
-            'first_name' => 'کاربر ارشد',
-            'user_id' => $admin->id
-        ]);
     }
 }

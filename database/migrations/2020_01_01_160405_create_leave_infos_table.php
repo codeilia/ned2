@@ -26,7 +26,10 @@ class CreateLeaveInfosTable extends Migration
             $table->integer('parents_die_vacation_leave')->nullable(); //mizan morakhasi fowt valedein
             $table->integer('deserved')->nullable(); //estehqaqi
             $table->integer('bonus')->nullable(); //tashviqi
+            $table->integer('extra_bonus')->nullable(); //tashviqi
             $table->integer('torahi')->nullable(); //torahi
+            $table->integer('estelaji')->nullable(); //torahi
+            $table->integer('emergency')->nullable(); //torahi
             $table->integer('total')->nullable();
             $table->timestamps();
         });

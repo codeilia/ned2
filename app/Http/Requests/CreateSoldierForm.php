@@ -26,7 +26,15 @@ class CreateSoldierForm extends ResponsiveFormRequest
     public function rules()
     {
         return [
-            //
+            'document_code' => 'required|unique:soldiers,document_code',
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'document_code.required' => 'لطفا یک نام پرونده وارد کنید',
+            'document_code.unique' => 'شماره پرونده قبلا ثبت شده است',
         ];
     }
 

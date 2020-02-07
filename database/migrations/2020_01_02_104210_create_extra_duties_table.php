@@ -22,6 +22,7 @@ class CreateExtraDutiesTable extends Migration
 
             $table->unsignedTinyInteger('days')->nullable();
             $table->string('reason')->nullable();
+            $table->integer('void_duty')->nullable();
             $table->timestamps();
         });
     }

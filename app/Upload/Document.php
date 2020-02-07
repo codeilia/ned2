@@ -12,10 +12,10 @@ namespace App\Store;
 use App\Contracts\Uploadable;
 use Illuminate\Support\Facades\Storage;
 
-class CV extends Uploadable
+class Document extends Uploadable
 {
     public function publicUpload()
     {
-        return Storage::disk('public')->put('cv', $this->request);
+        return Storage::disk('public')->put('documents', $this->request);
     }
 }

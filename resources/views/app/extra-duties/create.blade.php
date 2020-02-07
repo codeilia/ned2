@@ -37,7 +37,16 @@
                         <div class="form-group form-float">
                             <div class="form-line">
                                 <input type="text" id="days" class="form-control" name="days" value="{{ old('days') }}">
-                                <label for="days" class="form-label"> تعاد روز</label>
+                                <label for="days" class="form-label"> اضافه </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="form-group form-float">
+                            <div class="form-line">
+                                <input type="text" id="void_duty" class="form-control" name="void_duty" value="{{ old('void_duty') }}">
+                                <label for="void_duty" class="form-label"> خلاء(روز)‌ </label>
                             </div>
                         </div>
                     </div>

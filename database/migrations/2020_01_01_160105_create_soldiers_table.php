@@ -17,6 +17,7 @@ class CreateSoldiersTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('national_code')->index()->nullable();
             $table->bigInteger('document_code')->unique()->index()->nullable();
+            $table->string('archive_number')->unique()->index()->nullable();
             $table->string('document_status')->nullable();
             $table->string('first_name')->index()->nullable();
             $table->string('last_name')->index()->nullable();
@@ -39,7 +40,8 @@ class CreateSoldiersTable extends Migration
             $table->string('hair_color')->nullable();
             $table->string('post_code')->nullable();
             $table->text('address')->nullable();
-            $table->boolean('archive')->nullable();
+            $table->text('file')->nullable();
+            $table->boolean('archive')->default(false)->nullable();
             $table->timestamps();
         });
     }

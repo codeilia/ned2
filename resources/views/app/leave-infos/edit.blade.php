@@ -103,12 +103,43 @@
                             <div class="col-md-6">
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="number" id="torahi" class="form-control" name="torahi" value="{{ $soldier->leaveInfo ? $soldier->leaveInfo->torahi : null}}">
-                                        <label for="torahi" class="form-label"> توراهی</label>
+                                        <input type="number" id="extra_bonus" class="form-control" name="extra_bonus" value="{{ $soldier->leaveInfo ? $soldier->leaveInfo->extra_bonus : null}}">
+                                        <label for="extra_bonus" class="form-label"> تشویقی خارج از سقف</label>
                                     </div>
                                 </div>
                             </div>
 
+                            <div class="col-md-6">
+                                <div class="form-group form-float">
+                                    <div class="form-line">
+                                        <input type="number" id="estelaji" class="form-control" name="estelaji" value="{{ $soldier->leaveInfo ? $soldier->leaveInfo->estelaji : null}}">
+                                        <label for="estelaji" class="form-label"> استعلاجی</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group form-float">
+                                        <div class="form-line">
+                                            <input type="number" id="emergency" class="form-control" name="emergency" value="{{ $soldier->leaveInfo ? $soldier->leaveInfo->emergency : null}}">
+                                            <label for="emergency" class="form-label"> اظطراری</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group form-float">
+                                        <div class="form-line">
+                                            <input type="number" id="torahi" class="form-control" name="torahi" value="{{ $soldier->leaveInfo ? $soldier->leaveInfo->torahi : null}}">
+                                            <label for="torahi" class="form-label"> توراهی</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group form-float">
                                     <div class="form-line">
@@ -133,75 +164,108 @@
     <script src="{{ URL::asset('admin-dashboard/plugins/dropzone/dropzone.js') }}"></script>
 
     <script>
-        var $total = $("#total");
-        var total = Number($total.val());
-
-        var $bonus = $("#bonus");
-        var bonus = Number($bonus.val());
-
-        var $deserved = $("#deserved");
-        var deserved = Number($deserved.val());
-
-        var $parents_die_vacation_leave = $("#parents_die_vacation_leave");
-        var parents_die_vacation_leave = Number($parents_die_vacation_leave.val());
-
-        var $marriage_vacation_leave = $("#marriage_vacation_leave");
-        var marriage_vacation_leave = Number($marriage_vacation_leave.val());
-
-        var $distance = $("#distance");
-        var distance = Number($distance.val());
-
-        $total.val( deserved + bonus + parents_die_vacation_leave + marriage_vacation_leave);
+        // var $total = $("#total");
+        // var total = Number($total.val());
+        //
+        // var $bonus = $("#bonus");
+        // var bonus = Number($bonus.val());
+        //
+        // var $deserved = $("#deserved");
+        // var deserved = Number($deserved.val());
+        //
+        // var $emergency = $("#emergency");
+        // var emergency = Number($emergency.val());
+        //
+        // var $estelaji = $("#estelaji");
+        // var estelaji = Number($estelaji.val());
+        //
+        // var $torahi = $("#torahi");
+        // var torahi = Number($estelaji.val())
+        //
+        // var $parents_die_vacation_leave = $("#parents_die_vacation_leave");
+        // var parents_die_vacation_leave = Number($parents_die_vacation_leave.val());
+        //
+        // var $marriage_vacation_leave = $("#marriage_vacation_leave");
+        // var marriage_vacation_leave = Number($marriage_vacation_leave.val());
+        //
+        // var $distance = $("#distance");
+        // var distance = Number($distance.val());
+        //
+        // $total.val( deserved + bonus + parents_die_vacation_leave + marriage_vacation_leave);
 
 
         $(window).bind('load',function () {
-            $bonus.keyup(function () {
-                bonus = Number($(this).val());
-                total = deserved + bonus + parents_die_vacation_leave + marriage_vacation_leave;
-                $total.val(total);
-                $total.parent(".form-line").addClass('focused');
-            });
-
-            $deserved.keyup(function () {
-                deserved = Number($(this).val());
-                total = deserved + bonus + parents_die_vacation_leave + marriage_vacation_leave;
-                $total.val(total);
-                $total.parent(".form-line").addClass('focused');
-                // $total.toggleClass('focused');
-            });
-
-            $parents_die_vacation_leave.keyup(function () {
-                parents_die_vacation_leave = Number($(this).val());
-                total = deserved + bonus + parents_die_vacation_leave + marriage_vacation_leave;
-                $total.val(total);
-                $total.parent(".form-line").addClass('focused');
-                // $total.toggleClass('focused');
-            });
-
-            $marriage_vacation_leave.keyup(function () {
-                marriage_vacation_leave = Number($(this).val());
-                total = deserved + bonus + parents_die_vacation_leave + marriage_vacation_leave;
-                $total.val(total);
-                $total.parent(".form-line").addClass('focused');
-                // $total.toggleClass('focused');
-            });
-
-            $marriage_vacation_leave.keyup(function () {
-                marriage_vacation_leave = Number($(this).val());
-                total = deserved + bonus + parents_die_vacation_leave + marriage_vacation_leave;
-                $total.val(total);
-                $total.parent(".form-line").addClass('focused');
-                // $total.toggleClass('focused');
-            });
-
-            $distance.keyup(function () {
-                distance = Number($(this).val());
-                total = deserved + bonus + parents_die_vacation_leave + marriage_vacation_leave;
-                $total.val(total);
-                $total.parent(".form-line").addClass('focused');
-                $total.val(total);
-                // $total.toggleClass('focused');
-            });
+            // $bonus.keyup(function () {
+            //     bonus = Number($(this).val());
+            //     total = torahi + estelaji + emergency + deserved + bonus + parents_die_vacation_leave + marriage_vacation_leave;
+            //     $total.val(total);
+            //     $total.parent(".form-line").addClass('focused');
+            // });
+            //
+            // $deserved.keyup(function () {
+            //     deserved = Number($(this).val());
+            //     total = torahi + estelaji + emergency + deserved + bonus + parents_die_vacation_leave + marriage_vacation_leave;
+            //     $total.val(total);
+            //     $total.parent(".form-line").addClass('focused');
+            //     // $total.toggleClass('focused');
+            // });
+            //
+            // $emergency.keyup(function () {
+            //     emergency = Number($(this).val());
+            //     total = torahi + estelaji + emergency + deserved + bonus + parents_die_vacation_leave + marriage_vacation_leave;
+            //     $total.val(total);
+            //     $total.parent(".form-line").addClass('focused');
+            //     // $total.toggleClass('focused');
+            // });
+            //
+            // $estelaji.keyup(function () {
+            //    estelaji = Number($(this).val());
+            //     total = torahi + estelaji + emergency + deserved + bonus + parents_die_vacation_leave + marriage_vacation_leave;
+            //     $total.val(total);
+            //     $total.parent(".form-line").addClass('focused');
+            //     // $total.toggleClass('focused');
+            // });
+            //
+            // $torahi.keyup(function () {
+            //     torahi = Number($(this).val());
+            //     total = torahi + estelaji + emergency + deserved + bonus + parents_die_vacation_leave + marriage_vacation_leave;
+            //     $total.val(total);
+            //     $total.parent(".form-line").addClass('focused');
+            //     // $total.toggleClass('focused');
+            // });
+            //
+            // $parents_die_vacation_leave.keyup(function () {
+            //     parents_die_vacation_leave = Number($(this).val());
+            //     total = torahi + estelaji + emergency + deserved + bonus + parents_die_vacation_leave + marriage_vacation_leave;
+            //     $total.val(total);
+            //     $total.parent(".form-line").addClass('focused');
+            //     // $total.toggleClass('focused');
+            // });
+            //
+            // $marriage_vacation_leave.keyup(function () {
+            //     marriage_vacation_leave = Number($(this).val());
+            //     total = torahi + estelaji + emergency + deserved + bonus + parents_die_vacation_leave + marriage_vacation_leave;
+            //     $total.val(total);
+            //     $total.parent(".form-line").addClass('focused');
+            //     // $total.toggleClass('focused');
+            // });
+            //
+            // $marriage_vacation_leave.keyup(function () {
+            //     marriage_vacation_leave = Number($(this).val());
+            //     total = torahi + estelaji + emergency + deserved + bonus + parents_die_vacation_leave + marriage_vacation_leave;
+            //     $total.val(total);
+            //     $total.parent(".form-line").addClass('focused');
+            //     // $total.toggleClass('focused');
+            // });
+            //
+            // $distance.keyup(function () {
+            //     distance = Number($(this).val());
+            //     total = torahi + estelaji + emergency + deserved + bonus + parents_die_vacation_leave + marriage_vacation_leave;
+            //     $total.val(total);
+            //     $total.parent(".form-line").addClass('focused');
+            //     $total.val(total);
+            //     // $total.toggleClass('focused');
+            // });
 
             var datePickerInput = $('.datePicker');
             datePickerInput.pDatepicker({

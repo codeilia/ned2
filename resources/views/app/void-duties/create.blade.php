@@ -1,6 +1,6 @@
 @extends('layouts.app.master')
 
-@section('title', 'معاونت جدید')
+@section('title', 'ثبت مرخصی')
 
 @section('content-heading')
     <ol class="breadcrumb">
@@ -11,7 +11,7 @@
         </li>
 
         <li class="active">
-            <i class="material-icons">playlist_add</i>ایجاد معاونت جدید
+            <i class="material-icons">playlist_add</i> ثبت مرخصی
         </li>
     </ol>
 @endsection
@@ -25,19 +25,19 @@
         <div class="col-lg-12 col-md-10 col-sm-12 col-xs-12">
             @component('layouts.app.components.basic-simple-card')
             @slot('title')
-            ایجاد معاونت جدید
+            ثبت اضافه خدمت
             @endslot
 
             @slot('body')
-            <form action="{{ route('units.store') }}" method="post">
+            <form action="{{ route('extraDuties.store') }}" method="post">
                 {{ csrf_field() }}
 
                 <div class="row" style="margin-top: 2rem">
                     <div class="col-md-4">
                         <div class="form-group form-float">
                             <div class="form-line">
-                                <input type="text" id="title" class="form-control" name="title" value="{{ old('title') }}">
-                                <label for="title" class="form-label"> عنوان معاونت</label>
+                                <input type="text" id="days" class="form-control" name="days" value="{{ old('days') }}">
+                                <label for="days" class="form-label"> تعاد روز</label>
                             </div>
                         </div>
                     </div>
@@ -45,12 +45,25 @@
                     <div class="col-md-4">
                         <div class="form-group form-float">
                             <div class="form-line">
-                                <input type="number" id="yearly_max" class="form-control" name="yearly_max" value="{{ old('yearly_max') }}">
-                                <label for="yearly_max" class="form-label"> سقف در سال جاری</label>
+                                <input type="text" id="reason" class="form-control" name="reason" value="{{ old('reason') }}">
+                                <label for="reason" class="form-label"> علت</label>
                             </div>
                         </div>
                     </div>
 
+                    <div class="col-md-4" style="bottom: 2.5rem;">
+                        <div class="form-group form-float">
+                            <label for="soldier" class="form-label">سرباز </label>
+                            <select id="soldier" class="form-control show-tick" name="soldier" data-live-search="true">
+                                <option value=""> -- لطفا انتخاب کنید -- </option>
+                                @foreach($soldiers as $soldier)
+                                    <option value="{{ $soldier->id }}" {{ $soldier->id == $selectedSoldier ? 'selected' : '' }}>
+                                        {{ $soldier->first_name }} {{ $soldier->last_name }}
+                                    </option>
+                                @endforeach
+                            </select>
+                        </div>
+                    </div>
                 </div>
                 <button type="submit" class="btn btn-primary m-t-15 waves-effect">ثبت</button>
             </form>

@@ -35,8 +35,7 @@
                         <tr>
                             <th class="text-center">ردیف</th>
                             <th class="text-center">سرباز</th>
-                            <th class="text-center">اضافه</th>
-                            <th class="text-center">خلاء</th>
+                            <th class="text-center">تعداد روز</th>
                             <th class="text-center">علت</th>
                             <th class="text-center"> تاریخ ثبت</th>
                             <th class="text-center">تاریخ ویرایش</th>
@@ -49,7 +48,6 @@
                                 <td class="text-center"> {{ $index + 1 }} </td>
                                 <td class="text-center"> {{ $extraDuty->soldier->first_name . ' '.  $extraDuty->soldier->last_name}} </td>
                                 <td class="text-center"> {{ $extraDuty->days }} </td>
-                                <td class="text-center"> {{ $extraDuty->void_duty }} </td>
                                 <td class="text-center"> {{ $extraDuty->reason }} </td>
                                 <td class="text-center" style="direction: ltr;">{{ CustomDateTime::toJalali($extraDuty->created_at) }}</td>
                                 <td class="text-center" style="direction: ltr;">{{ CustomDateTime::toJalali($extraDuty->updated_at) }}</td>

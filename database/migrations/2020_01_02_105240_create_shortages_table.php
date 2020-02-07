@@ -22,7 +22,7 @@ class CreateShortagesTable extends Migration
 
             $table->dateTime('date')->nullable();
             $table->string('letter_number')->nullable();
-            $table->string('time')->nullable(); //modat
+            $table->integer('days')->nullable(); //modat
             $table->timestamps();
         });
     }

@@ -33,5 +33,17 @@ class Constants
             'name' => 'توراهی',
             'code' => 5,
         ],
+        'ESTELAJI' => [
+            'name' => 'استعلاجی',
+            'code' => 6,
+        ],
+        'EMERGENCY' => [
+            'name' => 'اظطراری',
+            'code' => 7,
+        ],
+        'EXTRA_BONUS' => [
+            'name' => 'تشویقی خارج از سقف',
+            'code' => 8,
+        ],
     ];
 }
