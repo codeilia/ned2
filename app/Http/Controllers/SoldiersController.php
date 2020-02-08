@@ -111,14 +111,15 @@ class SoldiersController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
+     * @param Request $request
      * @param Soldier $soldier
      * @return \Illuminate\Http\Response
      */
     public function edit(Soldier $soldier)
     {
         foreach (range(1, 400) as $item) {
-            $soldier = Soldier::where('archive', false)-> where('document_code', $item)->first();
-            if (empty($soldier)) {
+            $s = Soldier::where('archive', false)-> where('document_code', $item)->first();
+            if (empty($s)) {
                 $nonReservedCodes[] = $item;
             }
         };

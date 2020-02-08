@@ -33,8 +33,8 @@ class UpdateSoldierForm extends ResponsiveFormRequest
     public function persist()
     {
        $soldier = Soldier::findOrFail($this->soldier);
-
-       $soldier->update(request()->all());
+       request()->offsetSet('married', !! $this->married);
+       $soldier->update(request()->input());
 
        $this->result = $soldier->findOrFail($this->soldier);
 

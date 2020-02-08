@@ -143,7 +143,7 @@
                                             </a>
                                             <ul class="dropdown-menu">
                                                 <li>
-                                                    <a href="{{ route('martialInfos.edit', ['soldier' => $soldier->id]) }}">اطلاعات نظامی</a>
+                                                    <a href="{{ route('martialInfos.edit', [$soldier]) }}">اطلاعات نظامی</a>
                                                 </li>
 
                                                 <li>

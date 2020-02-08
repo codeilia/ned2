@@ -132,12 +132,28 @@
                             <div class="col-md-6">
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" id="marriage" class="form-control" name="marriage" value="{{ $soldier->marriage  }}">
-                                        <label for="marriage" class="form-label"> وضعیت تاهل</label>
+                                        <input type="text" id="religion" class="form-control" name="religion" value="{{ $soldier->religion  }}">
+                                        <label for="religion" class="form-label"> دین/مذهب</label>
                                     </div>
                                 </div>
                             </div>
 
+                            <div class="col-md-6">
+                                <div class="form-group form-float">
+                                        @php
+                                            if ($soldier->married === 'متاهل')
+                                            $married = 'checked';
+                                            else $married = '';
+                                        @endphp
+                                        <div class="form-group form-float">
+                                            <input type="checkbox" id="married" class="filled-in" name="married" {{$married}}>
+                                            <label for="married" class="form-label"> متاهل؟</label>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group form-float">
                                     <div class="form-line">
@@ -146,9 +162,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group form-float">
                                     <div class="form-line">
@@ -157,6 +171,9 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
+
+                        <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group form-float">
                                     <div class="form-line">
@@ -165,9 +182,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group form-float">
                                     <div class="form-line">
@@ -176,7 +191,9 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
 
+                        <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group form-float">
                                     <div class="form-line">
@@ -185,9 +202,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group form-float">
                                     <div class="form-line">
@@ -196,7 +211,9 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
 
+                        <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group form-float">
                                     <div class="form-line">
@@ -205,9 +222,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group form-float">
                                     <div class="form-line">
@@ -216,7 +231,9 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
 
+                        <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group form-float">
                                     <div class="form-line">

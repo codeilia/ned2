@@ -4,6 +4,11 @@ Auth::routes();
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/', "HomeController@index");
+
+    Route::get('edit-pass', "PasswordController@edit")->name('edit-pass');
+
+    Route::put('update-pass', 'PasswordController@update')->name('update-pass');
+
     Route::resource('soldiers', 'SoldiersController');
     Route::get('archives', 'SoldiersController@archives')->name('archives');
     Route::get('soldiers/{soldier}/updateMartialInfo', 'MartialInfosController@edit')->name('martialInfos.edit');
