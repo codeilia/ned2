@@ -34,6 +34,7 @@ return [
        'term' => 'دوره',
        'health_code' => 'کد سلامت',
        'tosieh_code' => 'وضعیت جسمانی',
+       'mental_status' => 'وضعیت روانی',
        'legal_duty_time' => 'مدت قانونی خدمت',
        'native' => 'بومی',
        'training_camp' => 'مرکز آموزشی',

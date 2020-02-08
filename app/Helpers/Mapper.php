@@ -37,4 +37,22 @@ class Mapper
         if ($code == 8)
             return 'تشویقی خارج از سقف';
     }
+
+    public static function mapMentalStatus($code)
+    {
+        if ($code == '1')
+            return 'گروه الف';
+        if ($code == '2')
+            return 'گروه ب';
+    }
+
+    public static function mapTosiehCode($code)
+    {
+        if ($code == '1')
+            return 'سالم';
+        if ($code == '2')
+            return 'معاف از رزم';
+        if ($code == '3')
+            return 'معاف از رزم و پست نگهبانی';
+    }
 }

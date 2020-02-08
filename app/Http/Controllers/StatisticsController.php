@@ -17,6 +17,7 @@ class StatisticsController extends Controller
     public function index(Request $request)
     {
         $columns = array_keys($request->except('_token'));
+//        dd($columns[3] == 'mental_status');
 
         $soldiers = Soldier::with([
             'leaves',
@@ -28,6 +29,9 @@ class StatisticsController extends Controller
             'absences',
             'shortages',
         ])->latest()->get();
+
+//        dd($soldiers[0]->martialInfo);
+
 
         return view('app.statistics.index', compact('columns', 'soldiers'));
     }

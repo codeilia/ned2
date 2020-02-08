@@ -53,6 +53,10 @@
                                 @foreach($columns as $column)
                                     @if($column === 'unit' )
                                         <td class="text-center">{{ $soldier->martialInfo->unit->title }}</td>
+                                    @elseif($column === 'mental_status' && $soldier->martialInfo)
+                                        <td class="text-center">{{ \App\Helpers\Mapper::mapMentalStatus($soldier->martialInfo->mental_status) }}</td>
+                                    @elseif($column === 'tosieh_code' && $soldier->martialInfo)
+                                        <td class="text-center">{{ \App\Helpers\Mapper::mapTosiehCode($soldier->martialInfo->tosieh_code) }}</td>
                                     @elseif(array_key_exists($column, trans('nedsa.martialInfo')) && $soldier->martialInfo)
                                     <td class="text-center">{{ $soldier->martialInfo->$column }}</td>
                                     @elseif(array_key_exists($column, trans('nedsa.leaveInfo')) && $soldier->leaveInfo)

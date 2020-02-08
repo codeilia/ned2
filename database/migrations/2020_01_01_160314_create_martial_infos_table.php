@@ -43,6 +43,7 @@ class CreateMartialInfosTable extends Migration
             $table->string('health_code')->nullable();
             $table->integer('legal_duty_time')->nullable(); // by month !!
             $table->string('tosieh_code')->nullable(); // 1.salem 2.moaf az razm  3.moaf az razm va post
+            $table->string('mental_status')->nullable(); // 1.salem 2.moaf az razm  3.moaf az razm va post
             $table->string('category')->nullable(); // raste khedmati
             $table->boolean('native')->nullable();
             $table->string('training_camp')->nullable();

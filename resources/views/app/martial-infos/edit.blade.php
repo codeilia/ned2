@@ -137,15 +137,29 @@
 
                             <div class="col-md-6">
                                 <div class="form-group form-float">
-                                    <div class="form-line">
-                                        <input type="text" id="tosieh_code" class="form-control" name="tosieh_code" value="{{ $soldier->martialInfo ? $soldier->martialInfo->tosieh_code : null}}">
-                                        <label for="tosieh_code" class="form-label"> کد توصیه</label>
-                                    </div>
+                                    <label for="tosieh_code" class="form-label">وضعیت جسمانی </label>
+                                    <select id="tosieh_code" class="form-control show-tick" name="tosieh_code" data-live-search="true">
+                                        <option value=""> -- لطفا انتخاب کنید -- </option>
+                                        <option value="1" {{ $soldier->martialInfo && $soldier->martialInfo->tosieh_code == 1 ? 'selected' : ''}}>سالم</option>
+                                        <option value="2" {{ $soldier->martialInfo && $soldier->martialInfo->tosieh_code == 2 ? 'selected' : ''}}>معاف از رزم</option>
+                                        <option value="3" {{ $soldier->martialInfo && $soldier->martialInfo->tosieh_code == 3 ? 'selected' : ''}}>معاف از رزم و پست نگهبانی</option>
+                                    </select>
                                 </div>
                             </div>
                         </div>
 
                         <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group form-float">
+                                    <label for="mental_status" class="form-label">وضعیت روانی </label>
+                                    <select id="mental_status" class="form-control show-tick" name="mental_status" data-live-search="true">
+                                        <option value=""> -- لطفا انتخاب کنید -- </option>
+                                        <option value="1" {{ $soldier->martialInfo && $soldier->martialInfo->mental_status == 1 ? 'selected' : ''}}>گروه الف</option>
+                                        <option value="2" {{ $soldier->martialInfo && $soldier->martialInfo->mental_status == 2 ? 'selected' : ''}}>گروه ب</option>
+                                    </select>
+                                </div>
+                            </div>
+
                             <div class="col-md-6">
                                 <div class="form-group form-float">
                                     <div class="form-line">

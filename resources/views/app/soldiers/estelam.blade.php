@@ -38,6 +38,7 @@
                             <th class="text-center">نام خانوادگی</th>
                             <th class="text-center">نام پدر</th>
                             <th class="text-center">کد ملی</th>
+                            <th class="text-center">وضعیت روانی</th>
                             <th class="text-center">تاریخ اعزام خدمت</th>
                             <th class="text-center">تاریخ پایان خدمت</th>
                             <th class="text-center">تاریخ پایان خدمت محاسبه شده</th>
@@ -58,6 +59,8 @@
                                 <td class="text-center"> {{ $soldier->last_name }} </td>
                                 <td class="text-center"> {{ $soldier->father_name }} </td>
                                 <td class="text-center"> {{ $soldier->national_code }} </td>
+                                <td class="text-center"> {{ \App\Helpers\Mapper::mapMentalStatus($soldier->martialInfo->mental_status
+                                ) }} </td>
                                 <td class="text-center"> {{ \App\Helpers\CustomDateTime::toJalali($soldier->martialInfo->sent_date) }} </td>
                                 <td class="text-center"> {{ \App\Helpers\CustomDateTime::toJalali($soldier->endDutyDate) }} </td>
                                 <td class="text-center" style="direction: ltr;">{{ \App\Helpers\CustomDateTime::toJalali($soldier->actualEndDutyDate) }}</td>

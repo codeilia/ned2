@@ -204,6 +204,11 @@
                     </div>
 
                     <div class="col-md-2">
+                        <input name="mental_status" type="checkbox" class="filled-in" id="mental_status">
+                        <label for="mental_status">وضعیت روانی</label>
+                    </div>
+
+                    <div class="col-md-2">
                         <input name="legal_duty_time" type="checkbox" class="filled-in" id="legal_duty_time">
                         <label for="legal_duty_time">مدت قانونی خدمت</label>
                     </div>
