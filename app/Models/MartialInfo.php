@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Helpers\CustomDateTime;
 use Illuminate\Database\Eloquent\Model;
 
 class MartialInfo extends BaseModel
@@ -17,4 +18,19 @@ class MartialInfo extends BaseModel
     {
         return $this->belongsTo(Unit::class);
     }
+//
+//    public function getStartDateAttribute($value)
+//    {
+//        return CustomDateTime::toJalali($value);
+//    }
+//
+//    public function getEndDateAttribute($value)
+//    {
+//        return CustomDateTime::toJalali($value);
+//    }
+//
+//    public function getSentDateAttribute($value)
+//    {
+//        return CustomDateTime::toJalali($value);
+//    }
 }

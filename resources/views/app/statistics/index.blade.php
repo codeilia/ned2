@@ -55,6 +55,14 @@
                                         <td class="text-center">{{ $soldier->martialInfo->unit->title }}</td>
                                     @elseif($column === 'mental_status' && $soldier->martialInfo)
                                         <td class="text-center">{{ \App\Helpers\Mapper::mapMentalStatus($soldier->martialInfo->mental_status) }}</td>
+                                    @elseif($column === 'sent_date' && $soldier->martialInfo)
+                                        <td class="text-center">{{ \App\Helpers\CustomDateTime::toJalali($soldier->martialInfo->sent_date) }}</td>
+                                    @elseif($column === 'end_date' && $soldier->martialInfo)
+                                        <td class="text-center">{{ \App\Helpers\CustomDateTime::toJalali($soldier->martialInfo->end_date) }}</td>
+                                    @elseif($column === 'start_date' && $soldier->martialInfo)
+                                        <td class="text-center">{{ \App\Helpers\CustomDateTime::toJalali($soldier->martialInfo->start_date) }}</td>
+                                    @elseif($column === 'actualEndDutyDate' && $soldier->martialInfo)
+                                        <td class="text-center">{{ \App\Helpers\CustomDateTime::toJalali($soldier->actualEndDutyDate) }}</td>
                                     @elseif($column === 'tosieh_code' && $soldier->martialInfo)
                                         <td class="text-center">{{ \App\Helpers\Mapper::mapTosiehCode($soldier->martialInfo->tosieh_code) }}</td>
                                     @elseif(array_key_exists($column, trans('nedsa.martialInfo')) && $soldier->martialInfo)

@@ -144,11 +144,13 @@ class SoldiersController extends Controller
      * Remove the specified resource from storage.
      *
      * @param  \App\Models\Soldier $soldier
-     * @return void
+     * @return \Illuminate\Http\RedirectResponse
+     * @throws \Exception
      */
     public function destroy(Soldier $soldier)
     {
-        $this->respondNotFound();
+        $soldier->delete();
+        return MessageResponse::respondSuccess('سرباز مورد نظر با موفقیت حذف شد');
     }
 
     public function archiveForm(Soldier $soldier, Request $request)

@@ -177,7 +177,7 @@ class Soldier extends BaseModel
 
         $withShortage = $legal->subDays($this->shortages()->sum('days'));
 
-        $withExtraDuty = $withShortage->addDays($this->extraDuties()->sum('days'));
+        $withExtraDuty = $withShortage->addDays($this->extraDuties()->sum('days') + $this->extraDuties()->sum('void_duty'));
 
         return $withExtraDuty;
     }

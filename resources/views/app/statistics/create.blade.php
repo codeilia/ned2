@@ -149,13 +149,13 @@
                     </div>
 
                     <div class="col-md-2">
-                        <input name="sent_date" type="checkbox" class="filled-in" id="sent_date">
-                        <label for="sent_date">تاریخ اعزام</label>
+                        <input name="extraDuty" type="checkbox" class="filled-in" id="extraDuty">
+                        <label for="extraDuty">اضافه خدمت</label>
                     </div>
 
                     <div class="col-md-2">
-                        <input name="extraDuty" type="checkbox" class="filled-in" id="extraDuty">
-                        <label for="extraDuty">اضافه خدمت</label>
+                        <input name="sent_date" type="checkbox" class="filled-in" id="sent_date">
+                        <label for="sent_date">تاریخ اعزام</label>
                     </div>
 
                     <div class="col-md-2">
@@ -169,9 +169,14 @@
                     </div>
 
                     <div class="col-md-2">
-                        <input name="lastLeave" type="checkbox" class="filled-in" id="lastLeave">
-                        <label for="lastLeave">تاریخ شروع خدمت</label>
+                        <input name="actualEndDutyDate" type="checkbox" class="filled-in" id="actualEndDutyDate">
+                        <label for="actualEndDutyDate">تاریخ محاسبه شده پایان خدمت</label>
                     </div>
+
+                    {{--<div class="col-md-2">--}}
+                        {{--<input name="lastLeave" type="checkbox" class="filled-in" id="lastLeave">--}}
+                        {{--<label for="lastLeave">تاریخ شروع خدمت</label>--}}
+                    {{--</div>--}}
 
                     <div class="col-md-2">
                         <input name="personal_code" type="checkbox" class="filled-in" id="personal_code">

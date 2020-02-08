@@ -20,6 +20,7 @@ return [
     'blood_type' => 'گروه خون',
     'post_code' => 'کد پستی',
     'archive' => 'بایگانی',
+    'actualEndDutyDate' => 'تاریخ محاسبه شده پایان خدمت',
 
 
    'martialInfo' => [
