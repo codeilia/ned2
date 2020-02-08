@@ -65,17 +65,8 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-xs-8 p-t-5" dir="rtl">
-                        <input type="checkbox" name="remember" id="rememberme" class="filled-in chk-col-pink">
-                        <label for="rememberme"> مرا به خاطر بسپار </label>
-                    </div>
                     <div class="col-xs-4">
                         <button class="btn btn-block bg-pink waves-effect" type="submit">ورود</button>
-                    </div>
-                </div>
-                <div class="row m-t-15 m-b--20">
-                    <div class="col-xs-6 align-right">
-                        <a href="{{ route('password.request') }}"> فراموشی رمز عبور </a>
                     </div>
                 </div>
             </form>
