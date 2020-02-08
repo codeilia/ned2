@@ -20,7 +20,7 @@ class CreateShortagesTable extends Migration
             $table->foreign('soldier_id')->references('id')->on('soldiers')
                 ->onDelete('cascade')->onUpdate('cascade');
 
-            $table->dateTime('date')->nullable();
+            $table->date('date')->nullable();
             $table->string('letter_number')->nullable();
             $table->integer('days')->nullable(); //modat
             $table->timestamps();

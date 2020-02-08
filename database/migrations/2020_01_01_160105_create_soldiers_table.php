@@ -22,7 +22,7 @@ class CreateSoldiersTable extends Migration
             $table->string('first_name')->index()->nullable();
             $table->string('last_name')->index()->nullable();
             $table->string('father_name')->index()->nullable();
-            $table->dateTime('birthday')->nullable();
+            $table->date('birthday')->nullable();
 //            $table->unsignedTinyInteger('birthday_day');
 //            $table->unsignedTinyInteger('birthday_month');
 //            $table->unsignedTinyInteger('birthday_year');

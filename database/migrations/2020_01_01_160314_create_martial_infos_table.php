@@ -25,9 +25,9 @@ class CreateMartialInfosTable extends Migration
                 ->onDelete('cascade')->onUpdate('cascade'); // Create this table
 
             $table->string('sent_zone')->nullable();
-            $table->dateTime('sent_date')->nullable();
-            $table->dateTime('end_date')->nullable(); // ( =sent_date + 21 mah)
-            $table->dateTime('start_date')->nullable();
+            $table->date('sent_date')->nullable();
+            $table->date('end_date')->nullable(); // ( =sent_date + 21 mah)
+            $table->date('start_date')->nullable();
 //            $table->unsignedTinyInteger('sent_date_day');
 //            $table->unsignedTinyInteger('sent_date_month');
 //            $table->unsignedTinyInteger('sent_date_year');
@@ -49,7 +49,7 @@ class CreateMartialInfosTable extends Migration
             $table->string('training_camp')->nullable();
             $table->boolean('green_card')->nullable(); // karte sabz dare ya nadare?
             $table->text('previous_duty_place_state')->nullable(); // vaziate mahal khedmat qabli
-            $table->dateTime('previous_intro_date')->nullable(); // tarikh moarefi az radeh qabli
+            $table->date('previous_intro_date')->nullable(); // tarikh moarefi az radeh qabli
             $table->timestamps();
         });
     }

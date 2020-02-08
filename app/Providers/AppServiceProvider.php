@@ -14,6 +14,7 @@ use App\Models\TrainTicket;
 use App\Models\Transfer;
 use App\Models\Translation;
 use App\Models\VisaService;
+use App\Repositories\JdfRepository;
 use Illuminate\Database\Eloquent\Relations\Relation;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\View;
@@ -31,6 +32,10 @@ class AppServiceProvider extends ServiceProvider
         View::composer('app.forms.visa-service.blade.php', function ($view) {
             $countries = Country::get();
             return $countries;
+        });
+
+        $this->app->singleton('jdate', function ($app) {
+            return new JdfRepository();
         });
 
         Paginator::defaultView('pagination::default');

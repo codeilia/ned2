@@ -301,10 +301,10 @@
                     }
                 },
                 timePicker: {
-                    enabled: true,
-                    showSeconds: true,
-                    showMeridian: true,
-                    scrollEnabled: true
+                    enabled: false,
+                    showSeconds: false,
+                    showMeridian: false,
+                    scrollEnabled: false
                 },
                 dayPicker: {
                     enabled: true,
@@ -353,7 +353,7 @@
                     }
                 },
                 onlyTimePicker: false,
-                justSelectOnDate: false,
+                justSelectOnDate: true,
                 minDate: false,
                 maxDate: false
 

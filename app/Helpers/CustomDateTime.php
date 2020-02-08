@@ -2,11 +2,13 @@
 
 namespace App\Helpers;
 
+use App\Repositories\JdfRepository;
 use Date\Date;
 use Date\Jalali;
 
 class CustomDateTime
 {
+
     public static function toGreg($date, $divider = null){
         $date = trim($date, 'PM');
         $date = trim($date, 'AM');
@@ -23,9 +25,17 @@ class CustomDateTime
         return $date;
     }
 
+    public static function toJalali2($date)
+    {
+        $jdf = new JdfRepository();
+
+        return $jdf->date('Y-m-d', $date);
+    }
+
     public static function toJalali($date){
         $date = new Date($date);
         $date = $date->toJalali();
+        $date = preg_replace('/(.*) \d\d:\d\d:\d\d/', '$1', $date);
         return $date;
     }
 

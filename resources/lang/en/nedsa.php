@@ -40,7 +40,7 @@ return [
        'native' => 'بومی',
        'training_camp' => 'مرکز آموزشی',
        'green_card' => 'کفایت از آموزش',
-       'previous_duty_place_state' => 'محل خدمت قبلی',
+       'previous_duty_place_state' => 'وضعیت محل خدمت قبلی',
        'previous_intro_date' => 'تاریخ معرفی از رده قبلی',
    ],
 

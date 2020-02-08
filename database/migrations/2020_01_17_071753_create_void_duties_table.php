@@ -20,8 +20,8 @@ class CreateVoidDutiesTable extends Migration
             $table->foreign('soldier_id')->references('id')->on('soldiers')
                 ->onDelete('cascade')->onUpdate('cascade');
 
-            $table->dateTime('from')->nullable();
-            $table->dateTime('to')->nullable();
+            $table->date('from')->nullable();
+            $table->date('to')->nullable();
             $table->integer('days')->nullable();
             $table->string('reason')->nullable();
             $table->timestamps();

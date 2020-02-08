@@ -63,6 +63,10 @@
                                         <td class="text-center">{{ \App\Helpers\CustomDateTime::toJalali($soldier->martialInfo->start_date) }}</td>
                                     @elseif($column === 'actualEndDutyDate' && $soldier->martialInfo)
                                         <td class="text-center">{{ \App\Helpers\CustomDateTime::toJalali($soldier->actualEndDutyDate) }}</td>
+                                    @elseif($column === 'previous_intro_date' && $soldier->martialInfo)
+                                        <td class="text-center">{{ \App\Helpers\CustomDateTime::toJalali($soldier->previous_intro_date) }}</td>
+                                    @elseif($column === 'birthday')
+                                        <td class="text-center">{{ \App\Helpers\CustomDateTime::toJalali($soldier->birthday) }}</td>
                                     @elseif($column === 'tosieh_code' && $soldier->martialInfo)
                                         <td class="text-center">{{ \App\Helpers\Mapper::mapTosiehCode($soldier->martialInfo->tosieh_code) }}</td>
                                     @elseif(array_key_exists($column, trans('nedsa.martialInfo')) && $soldier->martialInfo)
